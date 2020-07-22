@@ -1,4 +1,4 @@
-package bttl;
+package lvn_1_1307.bttl;
 
 public class bai3 {
     public static void gtln(int[] A){
