@@ -31,6 +31,15 @@ public class bai1 {
                 }
             }
         }
+//        for(int i=n-1; i>=1; i--){
+//            for(int j=n-1; j >= n-i; j--){
+//                if(A[j] <= A[j-1]){
+//                    temp = A[j-1];
+//                    A[j-1] = A[j];
+//                    A[j] = temp;
+//                }
+//            }
+//        }
         System.out.println(Arrays.toString(A));
     }
 
@@ -51,8 +60,8 @@ public class bai1 {
     }
     public static void main(String[] args) {
         int[] A = {17, 21, 9, 12, 6, 18, 4, 20, 7, 14};
-        sapxep1(A);
+        //sapxep1(A);
         sapxep2(A);
-        sapxep3(A);
+        //sapxep3(A);
     }
 }
