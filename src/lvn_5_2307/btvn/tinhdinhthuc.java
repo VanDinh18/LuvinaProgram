@@ -10,28 +10,13 @@ public class tinhdinhthuc {
         };
         int n = 4;
         double tyso;
-        double dt;
-        if(D[0][0] == 0){
-            dt = -1.0;
-        }
-        else {
-            dt = 1.0;
-        }
+        double dt = 1.0;
 
-        if(D[0][0] == 0){
-            double temp;
-            for(int i=1; i<n; i++){
-                if(D[i][0] != 0){
-                    for(int j=0; j<n; j++){
-                        temp = D[0][j];
-                        D[0][j] = D[i][j];
-                        D[i][j] = temp;
-                    }
-                    break;
-                }
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+
             }
         }
-
         for(int i=1; i<n; i++){
             for(int k=i; k<n; k++){
                 tyso = -  D[k][i-1] / D[i-1][i-1];
