@@ -15,7 +15,7 @@ public class NewClass {
         System.out.println("ngoai try catch");
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
         try{
             A();
         }catch (Exception e){
