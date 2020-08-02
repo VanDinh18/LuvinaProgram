@@ -10,23 +10,31 @@ public class bai5 {
         double dt = 1;
         double tyso;
         double temp;
-
+        int count;
         for(int i=0; i<n; i++){
             if(D[i][i] == 0){
+                count = 0;
                 for(int j=i+1; j<n; j++){
                     if(D[j][i] != 0){
                         for(int k=i; k<n; k++){
                             temp = D[j][k];
                             D[j][k] = D[i][k];
                             D[i][k] = temp;
+                            break;
                         }
                     }
+                    else {
+                        count++;
+                    }
+                }
+                if(count == n-i-1){
+                    return 0.0;
                 }
                 dt = -dt;
             }
             for(int j=i+1; j<n; j++){
                 tyso = - D[j][i] / D[i][i];
-                for(int k=i; k<n; k++){
+                for(int k=i+1; k<n; k++){     //k=i+1
                     D[j][k] = D[j][k] + (D[i][k] * tyso);
                 }
             }
