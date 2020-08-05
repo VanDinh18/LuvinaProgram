@@ -5,7 +5,7 @@ public class bai1 {
     public static void bai1(double[][] D, int n){
         double tyso;
         double temp;
-        for(int i=0; i<n; i++){
+        for(int i=0; i<n-1; i++){
             if(D[i][i] == 0){
                 for(int j=i+1; j<n; j++){
                     if(D[j][i] != 0){
@@ -38,7 +38,7 @@ public class bai1 {
         double tyso;
         double temp;
         int i = 0;
-        while (i < n){
+        while (i < n-1){
             if(D[i][i] == 0){
                 for(int j=i+1; j<n; j++){
                     if(D[j][i] != 0){
@@ -71,7 +71,7 @@ public class bai1 {
     public static void bai3(double[][] D, int n){
         double tyso;
         double temp;
-        for(int i=n-1; i>=0; i--){
+        for(int i=n-1; i>0; i--){
             if(D[i][i] == 0){
                 for(int j=i-1; j>=0; j--){
                     if(D[j][i] != 0){
@@ -102,7 +102,7 @@ public class bai1 {
     public static void bai5(double[][] D, int n){
         double tyso;
         double temp;
-        for(int i=0; i<n; i++){
+        for(int i=0; i<n-1; i++){
             if(D[i][n-i-1] == 0){
                 for(int j=i+1; j<n; j++){
                     if(D[j][i] != 0){
@@ -133,7 +133,7 @@ public class bai1 {
     public static void bai7(double[][] D, int n){
         double tyso;
         double temp;
-        for(int i=n-1; i>=0; i--){
+        for(int i=n-1; i>0; i--){
             if(D[i][n-i-1] == 0){
                 for(int j=i-1; j>=0; j--){
                     if(D[j][n-i-1] != 0){
@@ -172,6 +172,6 @@ public class bai1 {
         //bai2(D, n);
         //bai3(D, n);
         //bai5(D, n);
-        //bai7(D, n);
+        bai7(D, n);
     }
 }
