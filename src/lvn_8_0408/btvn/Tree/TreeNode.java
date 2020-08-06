@@ -5,35 +5,35 @@ public class TreeNode {
     TreeNode leftNode;
     TreeNode rightNode;
 
-
     public TreeNode(int value){
         this.data = value;
         leftNode = rightNode = null;
     }
     //khu de quy
     public void insert(int value){
-        int data = this.data;
-        TreeNode next = new TreeNode(data);
+        TreeNode next = this;
+        int data = next.data;
         while (true){
             if(data > value){
                 if(next.leftNode == null){
-                    leftNode = new TreeNode(value);
+                    next.leftNode = new TreeNode(value);
                     break;
                 }
                 else {
                     next = next.leftNode;
+                    data = next.data;
                 }
             }
             else if(data < value){
                 if(next.rightNode == null){
-                    rightNode = new TreeNode(value);
+                    next.rightNode = new TreeNode(value);
                     break;
                 }
                 else {
                     next = next.rightNode;
+                    data = next.data;
                 }
             }
-
         }
     }
 }

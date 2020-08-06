@@ -8,18 +8,17 @@ public class Main {
 
     public static void main(String[] args) {
         List<Laptop> listLaptop = new ArrayList<>();
+        listLaptop.add(new Laptop("thinkpad", "2030hz",8, "abc", 4010, 2160, "while"));
         listLaptop.add(new Laptop("hp", "2010hz", 4, "abc", 4010, 2160, "while"));
         listLaptop.add(new Laptop("dell", "2300hz", 12, "abc", 4000, 2170, "while"));
-        listLaptop.add(new Laptop("thinkpad", "2030hz",8, "abc", 4010, 2160, "while"));
         listLaptop.add(new Laptop("mac", "2000hz", 4, "abc", 4020, 2160, "while"));
         listLaptop.add(new Laptop("dell", "2300hz", 12, "abc", 4000, 2170, "while"));
         listLaptop.add(new Laptop("lenovo", "2020hz", 4, "abc", 4000, 2160, "while"));
         listLaptop.add(new Laptop("casio", "2040hz", 12, "abc", 4020, 2160, "while"));
         listLaptop.add(new Laptop("vostro", "2050hz", 8, "abc", 4080, 2160, "while"));
-        listLaptop.add(new Laptop("gamming", "2040hz", 8, "abc", 4040, 2160, "while"));
         listLaptop.add(new Laptop("dell", "2300hz", 12, "abc", 4000, 2170, "while"));
         listLaptop.add(new Laptop("hp", "2020hz", 4, "abc", 4000, 2160, "while"));
-
+        listLaptop.add(new Laptop("gamming", "2040hz", 8, "abc", 4040, 2160, "while"));
         //sap xep theo brank voi comparable
         //Collections.sort(listLaptop);
 
@@ -35,7 +34,21 @@ public class Main {
 //        }
 
         //tim kiem
-        Laptop searchLaptop = new Laptop("dell", "2300hz", 12, "abc", 4000, 2170, "while");
+        Laptop searchLaptop = new Laptop("dell", "2300hz", 8, "abc", 4000, 2170, "while");
+        Collections.sort(listLaptop, new Comparator<Laptop>() {
+            @Override
+            public int compare(Laptop t0, Laptop t1) {
+                if(t0.getRam() > t1.getRam()){
+                    return 1;
+                }
+                else if(t0.getRam() < t1.getRam()){
+                    return -1;
+                }
+                else {
+                    return 0;
+                }
+            }
+        });
         int index = Collections.binarySearch(listLaptop, searchLaptop, new Comparator<Laptop>() {
             @Override
             public int compare(Laptop t0, Laptop t1) {
