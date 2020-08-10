@@ -1,0 +1,52 @@
+package lvn_9_0808.btvn;
+
+public class Supplier {
+    private String idSup;
+    private String name;
+    private String address;
+    private String tel;
+
+    public Supplier(String idSup, String name, String address, String tel) {
+        this.idSup = idSup;
+        this.name = name;
+        this.address = address;
+        this.tel = tel;
+    }
+
+    public String getIdSup() {
+        return idSup;
+    }
+
+    public void setIdSup(String idSup) {
+        this.idSup = idSup;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    @Override
+    public String toString(){
+        return idSup + " " + name + " " + address + " " + tel;
+    }
+}
