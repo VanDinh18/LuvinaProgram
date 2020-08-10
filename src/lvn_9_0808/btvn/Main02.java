@@ -46,15 +46,6 @@ public class Main02 {
 
         map01.put(supplier02, (TreeMap<Purchase, ArrayList<PurchaseDetail>>) treemap02);
 
-        String supplierID = "no2";
-        for(Supplier keyS : map01.keySet()){
-            Map<Purchase, ArrayList<PurchaseDetail>> value = map01.get(keyS);
-            for(Purchase keyP : value.keySet()){
-                if(keyP.getSupplierID().equals(supplierID)){
-                    System.out.println("ma don nhap hang = " + keyP.getIdPurchase());
-                    break;
-                }
-            }
-        }
+
     }
 }

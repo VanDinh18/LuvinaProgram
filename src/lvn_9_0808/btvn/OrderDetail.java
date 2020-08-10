@@ -56,8 +56,14 @@ public class OrderDetail implements Comparable<OrderDetail>{
     }
 
     @Override
-    public String toString(){
-        return "|" + idOrder + " " + idDetail + " " + itemID + " " + amount + " " + price + "|\t";
+    public String toString() {
+        return "OrderDetail{" +
+                "idOrder=" + idOrder +
+                ", idDetail=" + idDetail +
+                ", itemID=" + itemID +
+                ", amount=" + amount +
+                ", price=" + price +
+                '}';
     }
 
     @Override

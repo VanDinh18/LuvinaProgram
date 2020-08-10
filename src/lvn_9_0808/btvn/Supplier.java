@@ -44,7 +44,14 @@ public class Supplier {
     public void setTel(String tel) {
         this.tel = tel;
     }
-
+    @Override
+    public int hashCode(){
+        int hash = (int)(idSup.charAt(0) + idSup.charAt(1));
+        return hash;
+    }
+    public boolean equals(Object obj){
+        return this.idSup.equals(((Supplier)(obj)).idSup);
+    }
     @Override
     public String toString(){
         return idSup + " " + name + " " + address + " " + tel;

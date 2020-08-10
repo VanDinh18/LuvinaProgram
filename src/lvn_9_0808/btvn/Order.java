@@ -39,14 +39,28 @@ public class Order implements Comparable<Order>{
 
     @Override
     public int compareTo(Order order) {
-        if(this.idOrder - order.idOrder > 0){
-            return 1;
-        }
-        else if(this.idOrder - order.idOrder < 0){
-            return -1;
+        if(this.customerID.compareTo(order.customerID) == 0){
+            if(this.idOrder > order.idOrder){
+                return 1;
+            }
+            else if(this.idOrder < order.idOrder){
+                return -1;
+            }
+            else {
+                return 0;
+            }
         }
         else {
-            return 0;
+            return this.customerID.compareTo(order.customerID);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Order { " +
+                "idOrder=" + idOrder +
+                ", ordDate=" + ordDate +
+                ", customerID='" + customerID + '\'' +
+                " } ";
     }
 }

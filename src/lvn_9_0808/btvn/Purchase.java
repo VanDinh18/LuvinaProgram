@@ -49,6 +49,7 @@ public class Purchase implements Comparable<Purchase>{
             return 0;
         }
     }
+
     @Override
     public String toString(){
         return idPurchase + " " + purDate + " " + supplierID;
