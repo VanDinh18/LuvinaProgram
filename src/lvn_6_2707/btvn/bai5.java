@@ -11,7 +11,7 @@ public class bai5 {
         double tyso;
         double temp;
         int count;
-        for(int i=0; i<n; i++){
+        for(int i=0; i<n-1; i++){
             if(D[i][i] == 0){
                 count = 0;
                 for(int j=i+1; j<n; j++){

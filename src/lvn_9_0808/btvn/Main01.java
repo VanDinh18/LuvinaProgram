@@ -1,7 +1,5 @@
 package lvn_9_0808.btvn;
 
-import lvn_4_2007.btvn.A;
-
 import java.util.*;
 
 public class Main01 {
